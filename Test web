@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="vi">
+<!-- Khai báo tài liệu là HTML5 và ngôn ngữ của trang là tiếng Việt -->
+<head>
+    <meta charset="UTF-8">
+    <!-- Thiết lập bảng mã ký tự là UTF-8, giúp hiển thị đúng các ký tự đặc biệt và tiếng Việt -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Đảm bảo trang web hiển thị tốt trên các thiết bị di động với tỷ lệ zoom hợp lý -->
+    <title>Trang Web Đa Năng</title>
+    <!-- Tiêu đề của trang web hiển thị trên tab của trình duyệt -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            /* Thiết lập font chữ cho toàn bộ trang là Arial, nếu không có thì dùng font sans-serif */
+            background: linear-gradient(135deg, #2b1055, #7597de, #f06292, #ff8cbb);
+            /* Đặt nền dạng gradient với nhiều màu sắc chuyển đổi */
+            background-size: 300% 300%;
+            /* Kích thước nền lớn hơn so với kích thước thật để tạo hiệu ứng chuyển động */
+            animation: galaxyBackground 15s ease infinite;
+            /* Thêm hiệu ứng chuyển động nền vô hạn với thời gian 15 giây */
+            margin: 0;
+            padding: 0;
+            position: relative;
+            /* Đặt vị trí tương đối để các thành phần khác định vị dễ dàng */
+        }
+
+        @keyframes galaxyBackground {
+            0% { background-position: 0% 70%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+            /* Hiệu ứng di chuyển nền qua các điểm khác nhau theo phần trăm của thời gian */
+        }
+
+        nav {
+            background-color: #333;
+            /* Đặt màu nền đậm cho thanh điều hướng */
+            overflow: hidden;
+            /* Đảm bảo nội dung không tràn ra ngoài */
+        }
+
+        nav a {
+            float: left;
+            /* Căn từng mục điều hướng sang bên trái */
+            display: block;
+            /* Đặt liên kết thành khối để có thể điều chỉnh kích thước và vị trí */
+            color: white;
+            /* Đặt màu chữ trắng cho các liên kết */
+            text-align: center;
+            /* Căn giữa chữ bên trong từng mục điều hướng */
+            padding: 14px 20px;
+            /* Thêm khoảng đệm vào từng mục điều hướng */
+            text-decoration: none;
+            /* Bỏ gạch chân dưới các liên kết */
+        }
+
+        nav a:hover {
+            background-color: #ff8cbb;
+            /* Đổi màu nền khi di chuột qua */
+            color: white;
+            /* Giữ màu chữ trắng khi di chuột */
+        }
+
+        header {
+            background-color: #ff8cbb;
+            /* Đặt màu nền cho phần tiêu đề */
+            color: white;
+            /* Đặt màu chữ trắng cho tiêu đề */
+            padding: 15px;
+            /* Thêm khoảng đệm cho nội dung tiêu đề */
+            text-align: center;
+            /* Căn giữa nội dung tiêu đề */
+        }
+
+        section {
+            margin: 20px;
+            /* Thêm khoảng cách xung quanh các phần */
+            display: none;
+            /* Ẩn tất cả các phần nội dung mặc định */
+            opacity: 0;
+            /* Đặt độ mờ ban đầu cho các phần */
+            transition: opacity 0.5s ease;
+            /* Thêm hiệu ứng chuyển đổi độ mờ
